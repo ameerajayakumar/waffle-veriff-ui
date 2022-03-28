@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//p[@class=\"text-center m-t mb-24 break-word\"]"
+}

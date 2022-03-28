@@ -1,0 +1,89 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648489198426' stop='1648489202732'>
+    <name>Veriff Demo Application: Session Configuration Page</name>
+    <title>Veriff Demo Application: Session Configuration Page</title>
+    <test-cases>
+        <test-case start='1648489198427' status='passed' stop='1648489202378'>
+            <name>Open URL &amp; verify "demo.saas" is present </name>
+            <title>Open URL &amp; verify "demo.saas" is present </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-99.0.4844.83'/>
+                <parameter kind='argument' name='browser' value='chrome-99.0.4844.83'/>
+            </parameters>
+            <steps>
+                <step start='1648489198427' status='passed' stop='1648489202378'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='ad70319e-c5be-488d-9763-ceccc5071e78-attachment.json' type='application/json' size='44'/>
+                        <attachment title='Screenshot' source='0804cee7-280f-43fb-9e45-3dd15518314f-attachment.png' type='image/png' size='27805'/>
+                    </attachments>
+                    <steps>
+                        <step start='1648489198461' status='passed' stop='1648489201916'>
+                            <name>POST /session/:sessionId/window/maximize</name>
+                            <title>POST /session/:sessionId/window/maximize</title>
+                            <attachments>
+                                <attachment title='Response' source='548da026-9e1b-4b32-926e-5e52a988b733-attachment.json' type='application/json' size='32'/>
+                            </attachments>
+                            <steps>
+                                <step start='1648489198463' status='passed' stop='1648489201914'>
+                                    <name>GET /session/:sessionId/url</name>
+                                    <title>GET /session/:sessionId/url</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1648489201917' status='passed' stop='1648489202043'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Response' source='6b0f035b-b02d-4f1c-8202-df523e7a9a53-attachment.json' type='application/json' size='58'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1648489202379' status='passed' stop='1648489202731'>
+            <name>Open URL &amp; verify title of the page</name>
+            <title>Open URL &amp; verify title of the page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-99.0.4844.83'/>
+            </parameters>
+            <steps>
+                <step start='1648489202379' status='undefined'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1648489202380' status='passed' stop='1648489202731'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='c7fe49c1-5d39-4c9f-9cdd-bf89f1aa358a-attachment.png' type='image/png' size='201061'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
