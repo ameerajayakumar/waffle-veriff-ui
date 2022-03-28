@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//p[contains(text(),\"this session you consent that your audio, video an\")]"
-}

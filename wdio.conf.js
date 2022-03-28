@@ -1,4 +1,20 @@
+const chromeOptions = {
+  // disable "Chrome is being controlled by automated software"
+  // https://github.com/GoogleChrome/puppeteer/issues/2070#issuecomment-521313694
+  excludeSwitches: ['enable-automation'],
+  // from https://github.com/Codeception/CodeceptJS/issues/563#issuecomment-310688797
+  prefs: { credentials_enable_service: false },
+  useAutomationExtension: false,
+};
+
 exports.config = {
+  capabilities: [
+    {
+      browserName: 'chrome',
+      'goog:chromeOptions': chromeOptions,
+      logLevel: 'warn',
+    },
+  ],
   //
   // ====================
   // Runner Configuration
@@ -109,7 +125,7 @@ exports.config = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  services: ['selenium-standalone'],
+  services: ['chromedriver'],
 
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber

@@ -8,7 +8,16 @@ class SessionPage extends Page {
     return $('//input[@name="name"]');
   }
   get language() {
-    return $('//button[@name="language"]');
+    return $('(//button[@name="language"])[1]');
+  }
+  get languageChild() {
+    return this.language.$$('li');
+  }
+  get languageListText() {
+    const langList = [];
+    return this.languageChild.map((element) => {
+      langList.push(element.getText());
+    });
   }
   get languageSelection() {
     return $('//li[@id="downshift-0-item-2"]');

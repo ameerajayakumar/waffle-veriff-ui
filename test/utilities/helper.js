@@ -13,3 +13,4 @@ export const waitAndClick = (element, timeout) => {
   element.waitForDisplayed({ timeout });
   element.click();
 };
+
