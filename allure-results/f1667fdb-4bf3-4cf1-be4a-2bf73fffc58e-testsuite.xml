@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648488534519' stop='1648488534996'>
+    <name>Veriff Demo Application: Session Configuration Page</name>
+    <title>Veriff Demo Application: Session Configuration Page</title>
+    <test-cases>
+        <test-case start='1648488534519' status='failed' stop='1648488534996'>
+            <name>Open URL &amp; verify "demo.saas" is present </name>
+            <title>Open URL &amp; verify "demo.saas" is present </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-99.0.4844.83'/>
+            </parameters>
+            <steps>
+                <step start='1648488534520' status='passed' stop='1648488534681'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='a993daef-6b37-4bbc-9928-34d2fd3dc005-attachment.json' type='application/json' size='8'/>
+                    </attachments>
+                    <steps>
+                        <step start='1648488534521' status='passed' stop='1648488534645'>
+                            <name>GET /session/:sessionId/url</name>
+                            <title>GET /session/:sessionId/url</title>
+                            <attachments>
+                                <attachment title='Response' source='5eb68a96-1969-4335-bb56-941d69977362-attachment.json' type='application/json' size='58'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1648488534683' status='passed' stop='1648488534994'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='8157be68-cde9-4bcd-8bd2-7ed3af32db62-attachment.png' type='image/png' size='27805'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>expected 'data:,' to include 'demo.saas'      
+                      actual expected
+                      
+                      'data:,'undefined
+                      </message>
+                <stack-trace>AssertionError: expected 'data:,' to include 'demo.saas'
+                    at Context.&lt;anonymous> (/Users/ameera/Documents/CodeCoderCoding/waffle-veriff-ui/test/specs/sessionConfig.js:12:22)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
