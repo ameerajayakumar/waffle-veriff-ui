@@ -42,7 +42,18 @@ describe('Session Configuration Page', () => {
     await expect(SessionPage.veriffMeButton).toBeClickable();
   });
 
-  it('Create session in redirect flow', async () => {
+  it('Verify all languages are displayed', async () => {
+    await SessionPage.language.click();
+    const items = [];
+    const langList = await SessionPage.languageChild;
+    for (let lang of langList) {
+      await items.push(await lang.getText());
+    }
+
+    await console.log('@@@@@ ', items);
+  });
+
+  it.only('Create session in redirect flow', async () => {
     await SessionPage.language.click();
     await SessionPage.languageSelection.click();
     await waitAndClick(SessionPage.fullName, 10000);
@@ -56,6 +67,8 @@ describe('Session Configuration Page', () => {
     await SessionPage.documentTypeSelection.click();
     await SessionPage.redirectRadio.click();
     await SessionPage.veriffMeButton.click();
-    // await chaiExpect(browser.url()).to.be.include('magic.saas');
+    await expect(SessionPage.sessionTitle).toHaveTextContaining(
+      resources.sessionTitle
+    );
   });
 });

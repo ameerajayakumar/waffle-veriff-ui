@@ -7,18 +7,16 @@ class SessionPage extends Page {
   get fullName() {
     return $('//input[@name="name"]');
   }
+  get sessionTitle() {
+    return $('div[class="s2f76j4"] h1');
+  }
   get language() {
     return $('(//button[@name="language"])[1]');
   }
   get languageChild() {
-    return this.language.$$('li');
+    return $$('li.Select-module_option__2ojUk');
   }
-  get languageListText() {
-    const langList = [];
-    return this.languageChild.map((element) => {
-      langList.push(element.getText());
-    });
-  }
+
   get languageSelection() {
     return $('//li[@id="downshift-0-item-2"]');
   }
@@ -32,7 +30,7 @@ class SessionPage extends Page {
     return $('//button[@name="documentType"]');
   }
   get documentTypeSelection() {
-    return $('//li[@id="downshift-2-item-2"]');
+    return $('#downshift-2-item-0');
   }
   get contextRadio() {
     return $('//input[@value="incontext"]');

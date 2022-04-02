@@ -3,7 +3,7 @@ import resources from '../resources';
 import { chaiExpect } from 'chai';
 import { waitForChange, waitAndClick } from '../utilities/helper';
 
-describe('Session context flow', () => {
+xdescribe('Session context flow', () => {
   beforeEach(async () => {
     await SessionPage.open();
   });
@@ -29,6 +29,7 @@ describe('Session context flow', () => {
     await SessionPage.documentTypeSelection.click();
     await expect(SessionPage.contextRadio).toBeSelected();
     await SessionPage.veriffMeButton.click();
+    await browser.pause(100000);
     //validate redirection to next page
   });
 });

@@ -1,20 +1,4 @@
-const chromeOptions = {
-  // disable "Chrome is being controlled by automated software"
-  // https://github.com/GoogleChrome/puppeteer/issues/2070#issuecomment-521313694
-  excludeSwitches: ['enable-automation'],
-  // from https://github.com/Codeception/CodeceptJS/issues/563#issuecomment-310688797
-  prefs: { credentials_enable_service: false },
-  useAutomationExtension: false,
-};
-
 exports.config = {
-  capabilities: [
-    {
-      browserName: 'chrome',
-      'goog:chromeOptions': chromeOptions,
-      logLevel: 'warn',
-    },
-  ],
   //
   // ====================
   // Runner Configuration
@@ -72,6 +56,10 @@ exports.config = {
       //
       browserName: 'chrome',
       acceptInsecureCerts: true,
+      'goog:chromeOptions': {
+        excludeSwitches: ['enable-automation'],
+        useAutomationExtension: false,
+      },
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
