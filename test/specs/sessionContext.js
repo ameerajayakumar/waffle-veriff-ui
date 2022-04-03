@@ -3,7 +3,7 @@ import resources from '../resources';
 import { chaiExpect } from 'chai';
 import { waitForChange, waitAndClick } from '../utilities/helper';
 
-xdescribe('Session context flow', () => {
+describe('Session context flow', () => {
   beforeEach(async () => {
     await SessionPage.open();
   });

@@ -53,7 +53,7 @@ describe('Session Configuration Page', () => {
     await console.log('@@@@@ ', items);
   });
 
-  it.only('Create session in redirect flow', async () => {
+  it('Create session in redirect flow', async () => {
     await SessionPage.language.click();
     await SessionPage.languageSelection.click();
     await waitAndClick(SessionPage.fullName, 10000);
