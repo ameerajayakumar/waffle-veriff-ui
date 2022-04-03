@@ -148,6 +148,12 @@ exports.config = {
         //disableMochaHooks: true,
       },
     ],
+    [
+      'junit',
+      {
+        outputDir: './report',
+      },
+    ],
   ],
 
   //
